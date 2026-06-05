@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ToolNova - Ücretsiz Online Araçlar</title>
 
+<!-- SEO -->
+<meta name="description" content="ToolNova - Ücretsiz online araçlar: kelime sayacı, karakter sayacı, AI araçlar, şifre oluşturucu ve daha fazlası.">
+<meta name="keywords" content="kelime sayacı, karakter sayacı, ai roman yazıcı, şifre oluşturucu, ücretsiz araçlar, pdf araçları">
+<meta name="author" content="ToolNova">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+
 <style>
 *{
     margin:0;
@@ -18,6 +27,11 @@ body{
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.70);
+    min-height:100vh;
 }
 
 /* NAVBAR */
@@ -37,13 +51,7 @@ body{
     color:white;
     margin:0 10px;
     text-decoration:none;
-}
-
-/* OVERLAY */
-.overlay{
-    background:rgba(0,0,0,0.70);
-    min-height:100vh;
-    padding:20px;
+    font-weight:bold;
 }
 
 header{
@@ -68,7 +76,7 @@ header p{
     opacity:0.9;
 }
 
-/* CATEGORIES */
+/* CATEGORY */
 h2{
     color:white;
     text-align:center;
@@ -95,7 +103,7 @@ h2{
 }
 
 .card:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 .card p{
@@ -129,11 +137,12 @@ footer{
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <div style="font-weight:bold;font-size:20px;">ToolNova 🚀</div>
+    <div style="font-size:20px;">ToolNova 🚀</div>
     <div>
-        <a href="#">Ana Sayfa</a>
-        <a href="#text">Metin Araçları</a>
-        <a href="#ai">AI Araçlar</a>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="#text">Metin</a>
+        <a href="#ai">AI</a>
+        <a href="pro.html">PRO</a>
     </div>
 </div>
 
@@ -143,7 +152,6 @@ footer{
     <div class="stats">⚡ 7+ ücretsiz araç aktif</div>
 </header>
 
-<!-- TEXT TOOLS -->
 <h2 id="text">🧮 Metin Araçları</h2>
 
 <div class="container">
@@ -174,14 +182,13 @@ footer{
 
 </div>
 
-<!-- AI TOOLS -->
 <h2 id="ai">🧠 AI Araçlar</h2>
 
 <div class="container">
 
     <div class="card">
         <h2>📚 AI Roman Yazıcı</h2>
-        <p>Hikaye ve roman üretir</p>
+        <p>Hikaye üretir</p>
         <a class="button" href="ai-novel-generator.html">Aç</a>
     </div>
 
