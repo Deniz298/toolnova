@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>AI Roman Yazıcı - ToolNova</title>
+</head>
+
+<body style="font-family:Arial; padding:30px; text-align:center;">
+
+<h1>📚 AI Roman Yazıcı</h1>
+
+<textarea id="input" placeholder="Konu yaz (örnek: yasak aşk, uzay savaşı)" style="width:80%;height:100px;"></textarea>
+
+<br><br>
+
+<button onclick="uret()">Roman Üret</button>
+
+<p id="sonuc" style="margin-top:20px; white-space:pre-line;"></p>
+
+<script>
+function uret(){
+let konu = document.getElementById("input").value;
+
+let roman =
+"📖 BÖLÜM 1\n" +
+konu + " ile başlayan hikaye...\n" +
+"İki karakter beklenmedik şekilde karşılaştı...\n\n" +
+"📖 BÖLÜM 2\n" +
+"Sırlar yavaş yavaş ortaya çıkmaya başladı...\n\n" +
+"📖 SON\n" +
+"Hiçbir şey eskisi gibi olmadı.";
+
+document.getElementById("sonuc").innerText = roman;
+}
+</script>
+
+</body>
+</html>
