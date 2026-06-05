@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karakter Sayacı - ToolNova</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+textarea{
+    width:100%;
+    height:200px;
+    padding:10px;
+    font-size:16px;
+    margin-top:20px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.result{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+a{
+    display:inline-block;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔤 Karakter Sayacı</h1>
+
+<p>Metninizdeki karakter sayısını anında öğrenin.</p>
+
+<textarea id="text"></textarea>
+
+<br>
+
+<button onclick="hesapla()">Karakter Say</button>
+
+<div class="result" id="sonuc">
+Karakter: 0
+</div>
+
+<a href="index.html">🏠 Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+function hesapla(){
+    let metin = document.getElementById("text").value;
+    document.getElementById("sonuc").innerHTML =
+    "Karakter: " + metin.length;
+}
+</script>
+
+</body>
+</html>
