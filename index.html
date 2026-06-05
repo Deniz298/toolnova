@@ -3,15 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ToolNova</title>
+<title>ToolNova - Ücretsiz Online Araçlar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background-image:url('VqX_v-piw6qswnjhCD9psyxYZaK9ia5nB3P9D5khOxz7lzrws2xEKGFeGFDLTQFr1jOOxbj1Bt2SiZFgNgExHrxIC_WqwOXXTB5_RMPJMmaIebJhmAT0d3Xdn8riopr8KuCDV-03GplpK9YZZ5jDUMYodGD6LZsa3dW7YVobUI_47Nm3mbqJ9ecwKbSOCw9M.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.65);
+    min-height:100vh;
+    padding:20px;
+}
+
+header{
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin:20px 0;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:15px;
+}
+
+.button{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.button:hover{
+    opacity:0.9;
+}
+
+footer{
+    text-align:center;
+    color:white;
+    padding:40px 20px;
+}
+</style>
 </head>
 
-<body style="font-family:Arial; text-align:center; background:#f5f5f5;">
+<body>
 
-<h1>ToolNova 🚀</h1>
-<p>Site başarıyla çalışıyor</p>
+<div class="overlay">
 
-<a href="word-counter.html">Kelime Sayacı</a>
+<header>
+    <h1>🚀 ToolNova</h1>
+    <p>Ücretsiz PDF Araçları, Metin Araçları, Görsel Araçları ve Yapay Zekâ Destekli Araçlar</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>📝 Kelime Sayacı</h2>
+        <p>Metninizdeki kelime sayısını saniyeler içinde hesaplayın.</p>
+        <a class="button" href="word-counter.html">Aracı Aç</a>
+    </div>
+
+    <div class="card">
+        <h2>📄 Yakında Eklenecek Araçlar</h2>
+        <p>PDF Birleştirici, Görsel Dönüştürücü, Karakter Sayacı ve daha fazlası çok yakında.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 ToolNova • Ücretsiz Online Araçlar
+</footer>
+
+</div>
 
 </body>
 </html>
