@@ -17,29 +17,26 @@
 <loc>https://deniz298.github.io/toolnova/age-calculator.html</loc>
 </url>
 
-<url>
-<loc>https://deniz298.github.io/toolnova/random-number.html</loc>
-</url>This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://deniz298.github.io/toolnova/random-number.html</loc>
+</url>
 
 <url>
-<loc>https://deniz298.github.io/toolnova/</loc>
+<loc>https://deniz298.github.io/toolnova/bmi-calculator.html</loc>
 </url>
-  
+
 <url>
-<loc>https://deniz298.github.io/toolnova/about.html</loc>
+<loc>https://deniz298.github.io/toolnova/text-reverser.html</loc>
 </url>
-  
+
 <url>
-<loc>https://deniz298.github.io/toolnova/contact.html</loc>
+<loc>https://deniz298.github.io/toolnova/qr-generator.html</loc>
 </url>
-  
+
 <url>
-<loc>https://deniz298.github.io/toolnova/privacy.html</loc>
+<loc>https://deniz298.github.io/toolnova/stopwatch.html</loc>
 </url>
-  
-<url>
-<loc>https://deniz298.github.io/toolnova/terms.html</loc>
+
+<url><loc>https://deniz298.github.io/toolnova/countdown.html</loc>
 </url>
 
 </urlset>
