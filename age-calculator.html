@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaş Hesaplama - ToolNova</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>🎂 Yaş Hesaplama</h1>
+
+<input type="date" id="birth">
+
+<br><br>
+
+<button onclick="hesapla()">Yaşımı Hesapla</button>
+
+<h2 id="sonuc"></h2>
+
+<script>
+function hesapla(){
+let dogum=new Date(document.getElementById("birth").value);
+let bugun=new Date();
+
+let yas=bugun.getFullYear()-dogum.getFullYear();
+
+if(
+bugun.getMonth()<dogum.getMonth() ||
+(bugun.getMonth()==dogum.getMonth() &&
+bugun.getDate()<dogum.getDate())
+){
+yas--;
+}
+
+document.getElementById("sonuc").innerText=
+"Yaşınız: "+yas;
+}
+</script>
+
+</body>
+</html>
