@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Kronometre - ToolNova</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>⏱️ Kronometre</h1>
+
+<h2 id="sure">0</h2>
+
+<button onclick="baslat()">Başlat</button>
+<button onclick="dur()">Dur</button>
+<button onclick="sifirla()">Sıfırla</button>
+
+<script>
+let saniye=0;
+let timer;
+
+function baslat(){
+clearInterval(timer);
+
+timer=setInterval(function(){
+saniye++;
+document.getElementById("sure").innerText=saniye;
+},1000);
+}
+
+function dur(){
+clearInterval(timer);
+}
+
+function sifirla(){
+clearInterval(timer);
+saniye=0;
+document.getElementById("sure").innerText=0;
+}
+</script>
+
+</body>
+</html>
