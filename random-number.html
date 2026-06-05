@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rastgele Sayı Üretici - ToolNova</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>🎲 Rastgele Sayı Üretici</h1>
+
+<input type="number" id="min" placeholder="Minimum">
+
+<br><br>
+
+<input type="number" id="max" placeholder="Maksimum">
+
+<br><br>
+
+<button onclick="uret()">Üret</button>
+
+<h2 id="sonuc"></h2>
+
+<script>
+function uret(){
+let min=parseInt(document.getElementById("min").value);
+let max=parseInt(document.getElementById("max").value);
+
+let sayi=Math.floor(Math.random()*(max-min+1))+min;
+
+document.getElementById("sonuc").innerText=sayi;
+}
+</script>
+
+</body>
+</html>
