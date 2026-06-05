@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>AI İçerik Üretici - ToolNova</title>
+</head>
+
+<body style="font-family:Arial; padding:30px; text-align:center;">
+
+<h1>✍️ AI İçerik Üretici</h1>
+
+<textarea id="input" placeholder="Konu yaz (örnek: fitness, teknoloji, para kazanma)" style="width:80%;height:100px;"></textarea>
+
+<br><br>
+
+<button onclick="uret()">İçerik Üret</button>
+
+<p id="sonuc" style="margin-top:20px; white-space:pre-line;"></p>
+
+<script>
+function uret(){
+let konu = document.getElementById("input").value;
+
+let icerik =
+"Başlık: " + konu.toUpperCase() + "\n\n" +
+"Bu yazıda " + konu + " hakkında temel bilgiler paylaşılmaktadır.\n\n" +
+"1. Giriş: " + konu + " günümüzde oldukça önemlidir.\n" +
+"2. Gelişme: İnsanlar bu konuda sürekli araştırma yapmaktadır.\n" +
+"3. Sonuç: Doğru bilgi ile başarı mümkündür.";
+
+document.getElementById("sonuc").innerText = icerik;
+}
+</script>
+
+</body>
+</html>
