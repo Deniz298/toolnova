@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Hesaplama - ToolNova</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>⚖️ BMI Hesaplama</h1>
+
+<input type="number" id="kilo" placeholder="Kilonuz (kg)">
+
+<br><br>
+
+<input type="number" id="boy" placeholder="Boyunuz (cm)">
+
+<br><br>
+
+<button onclick="hesapla()">Hesapla</button>
+
+<h2 id="sonuc"></h2>
+
+<script>
+function hesapla(){
+let kilo=parseFloat(document.getElementById("kilo").value);
+let boy=parseFloat(document.getElementById("boy").value)/100;
+
+let bmi=(kilo/(boy*boy)).toFixed(1);
+
+document.getElementById("sonuc").innerText=
+"BMI Sonucunuz: "+bmi;
+}
+</script>
+
+</body>
+</html>
