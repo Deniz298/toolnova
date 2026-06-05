@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Kod Oluşturucu - ToolNova</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>📱 QR Kod Oluşturucu</h1>
+
+<input type="text" id="metin" placeholder="Metin veya link girin" style="width:300px;padding:10px;">
+
+<br><br>
+
+<button onclick="olustur()">QR Oluştur</button>
+
+<br><br>
+
+<img id="qr">
+
+<script>
+function olustur(){
+let metin=document.getElementById("metin").value;
+
+document.getElementById("qr").src=
+"https://api.qrserver.com/v1/create-qr-code/?size=250x250&data="
++encodeURIComponent(metin);
+}
+</script>
+
+</body>
+</html>
