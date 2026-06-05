@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>AI Şarkı Yazıcı - ToolNova</title>
+</head>
+
+<body style="font-family:Arial; padding:30px; text-align:center;">
+
+<h1>🎵 AI Şarkı Yazıcı</h1>
+
+<textarea id="input" placeholder="Konu yaz (örnek: ayrılık, aşk, sokaklar)" style="width:80%;height:100px;"></textarea>
+
+<br><br>
+
+<button onclick="uret()">Şarkı Üret</button>
+
+<p id="sonuc" style="margin-top:20px; white-space:pre-line;"></p>
+
+<script>
+function uret(){
+let konu = document.getElementById("input").value;
+
+let sarki =
+"[Verse 1]\n" +
+konu + " içinde kayboldum...\n" +
+"Geceler uzun, yollar sessiz...\n\n" +
+"[Nakarat]\n" +
+"Kalbim yanıyor, sensiz her an...\n" +
+"Bu şehirde yalnız kaldım...\n\n" +
+"[Verse 2]\n" +
+"Hatıralar peşimi bırakmıyor...\n\n" +
+"[Outro]\n" +
+"Ve her şey yavaşça siliniyor...";
+
+document.getElementById("sonuc").innerText = sarki;
+}
+</script>
+
+</body>
+</html>
