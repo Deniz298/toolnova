@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Geri Sayım Sayacı - ToolNova</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h1>⏳ Geri Sayım Sayacı</h1>
+
+<input type="number" id="sayi" placeholder="Saniye">
+
+<br><br>
+
+<button onclick="baslat()">Başlat</button>
+
+<h2 id="sonuc"></h2>
+
+<script>
+function baslat(){
+
+let saniye=
+parseInt(document.getElementById("sayi").value);
+
+let timer=setInterval(function(){
+
+document.getElementById("sonuc").innerText=saniye;
+
+saniye--;
+
+if(saniye<0){
+clearInterval(timer);
+document.getElementById("sonuc").innerText="Süre Doldu!";
+}
+
+},1000);
+
+}
+</script>
+
+</body>
+</html>
