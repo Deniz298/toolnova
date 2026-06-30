@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yüzde Hesaplama | ToolNova</title>
+
+<meta name="description" content="Ücretsiz yüzde hesaplama aracı. Bir sayının yüzdesini veya yüzde artış ve azalışını kolayca hesaplayın.">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+margin:0;
+padding:30px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:18px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.result{
+margin-top:20px;
+font-size:22px;
+text-align:center;
+}
+
+a{
+display:inline-block;
+margin-top:25px;
+color:#60a5fa;
+text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 Yüzde Hesaplama</h1>
+
+<input type="number" id="number" placeholder="Sayı">
+
+<input type="number" id="percent" placeholder="Yüzde">
+
+<button onclick="calculate()">Hesapla</button>
+
+<div class="result" id="result"></div>
+
+<a href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let number=parseFloat(document.getElementById("number").value);
+
+let percent=parseFloat(document.getElementById("percent").value);
+
+if(isNaN(number)||isNaN(percent)){
+document.getElementById("result").innerHTML="Lütfen tüm alanları doldurun.";
+return;
+}
+
+let result=number*percent/100;
+
+document.getElementById("result").innerHTML=
+number+" sayısının %"+percent+" = <b>"+result+"</b>";
+
+}
+
+</script>
+
+</body>
+</html>
