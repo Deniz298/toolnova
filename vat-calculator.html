@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KDV Hesaplama | ToolNova</title>
+
+<meta name="description" content="Ücretsiz KDV hesaplama aracı. KDV dahil ve hariç fiyatları kolayca hesaplayın.">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+margin:0;
+padding:30px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:18px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#1d4ed8;
+}
+
+.result{
+margin-top:20px;
+font-size:22px;
+text-align:center;
+line-height:1.8;
+}
+
+a{
+display:inline-block;
+margin-top:25px;
+color:#60a5fa;
+text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 KDV Hesaplama</h1>
+
+<input type="number" id="price" placeholder="Tutar">
+
+<select id="vat">
+<option value="1">%1</option>
+<option value="10">%10</option>
+<option value="20" selected>%20</option>
+</select>
+
+<button onclick="calculate()">Hesapla</button>
+
+<div class="result" id="result"></div>
+
+<a href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let price=parseFloat(document.getElementById("price").value);
+
+let vat=parseFloat(document.getElementById("vat").value);
+
+if(isNaN(price)){
+document.getElementById("result").innerHTML="Lütfen bir tutar girin.";
+return;
+}
+
+let tax=price*vat/100;
+let total=price+tax;
+
+document.getElementById("result").innerHTML=
+"KDV Tutarı: <b>"+tax.toFixed(2)+" TL</b><br>" +
+"KDV Dahil Toplam: <b>"+total.toFixed(2)+" TL</b>";
+
+}
+
+</script>
+
+</body>
+</html>
