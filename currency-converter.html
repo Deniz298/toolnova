@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Döviz Çevirici | ToolNova</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+margin:0;
+padding:30px;
+}
+.container{
+max-width:600px;
+margin:auto;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+}
+input,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:18px;
+border:none;
+border-radius:8px;
+}
+button{
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+}
+.result{
+margin-top:20px;
+font-size:22px;
+text-align:center;
+}
+a{
+display:inline-block;
+margin-top:20px;
+color:#60a5fa;
+text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>💱 Döviz Çevirici</h1>
+
+<input type="number" id="amount" placeholder="Tutar">
+
+<select id="rate">
+<option value="40">USD → TRY (1 USD = 40 TL)</option>
+<option value="47">EUR → TRY (1 EUR = 47 TL)</option>
+</select>
+
+<button onclick="convert()">Çevir</button>
+
+<div class="result" id="result"></div>
+
+<a href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+
+function convert(){
+
+let amount=parseFloat(document.getElementById("amount").value);
+
+let rate=parseFloat(document.getElementById("rate").value);
+
+if(isNaN(amount)){
+document.getElementById("result").innerHTML="Lütfen tutar giriniz.";
+return;
+}
+
+document.getElementById("result").innerHTML=
+"Tahmini Sonuç: <b>"+(amount*rate).toFixed(2)+" TL</b>";
+
+}
+
+</script>
+
+</body>
+</html>
