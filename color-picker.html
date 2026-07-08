@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renk Seçici | ToolNova</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+margin:0;
+padding:30px;
+}
+
+.container{
+max-width:600px;
+margin:auto;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+input[type=color]{
+width:150px;
+height:150px;
+border:none;
+cursor:pointer;
+background:none;
+}
+
+.code{
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+a{
+display:block;
+margin-top:25px;
+color:#60a5fa;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌈 Renk Seçici</h1>
+
+<input type="color" id="picker" value="#2563eb">
+
+<div class="code" id="hex">#2563eb</div>
+
+<button onclick="copyColor()">Rengi Kopyala</button>
+
+<a href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+
+const picker=document.getElementById("picker");
+const hex=document.getElementById("hex");
+
+picker.addEventListener("input",function(){
+hex.innerHTML=this.value.toUpperCase();
+});
+
+function copyColor(){
+navigator.clipboard.writeText(hex.innerHTML);
+alert("Renk kodu kopyalandı.");
+}
+
+</script>
+
+</body>
+</html>
