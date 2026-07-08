@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder / Decoder | ToolNova</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111827;
+color:white;
+margin:0;
+padding:30px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#1f2937;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+textarea{
+width:100%;
+height:150px;
+padding:10px;
+margin:15px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+resize:vertical;
+}
+
+button{
+padding:12px 20px;
+margin:5px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+a{
+display:block;
+margin-top:20px;
+color:#60a5fa;
+text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔐 Base64 Encoder / Decoder</h1>
+
+<textarea id="text" placeholder="Metni buraya yazın..."></textarea>
+
+<button onclick="encodeText()">Encode</button>
+<button onclick="decodeText()">Decode</button>
+
+<a href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+<script>
+
+function encodeText(){
+let text=document.getElementById("text").value;
+document.getElementById("text").value=btoa(unescape(encodeURIComponent(text)));
+}
+
+function decodeText(){
+try{
+let text=document.getElementById("text").value;
+document.getElementById("text").value=decodeURIComponent(escape(atob(text)));
+}catch{
+alert("Geçersiz Base64 metni.");
+}
+}
+
+</script>
+
+</body>
+</html>
